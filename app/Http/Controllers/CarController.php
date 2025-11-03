@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCarRequest;
 use App\Http\Requests\UpdateCarRequest;
 use App\Models\Car;
+use Inertia\Inertia;
 
 class CarController extends Controller
 {
@@ -13,7 +14,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('cars/Index');
     }
 
     /**

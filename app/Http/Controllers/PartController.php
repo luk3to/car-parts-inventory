@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePartRequest;
 use App\Http\Requests\UpdatePartRequest;
 use App\Models\Part;
+use Inertia\Inertia;
 
 class PartController extends Controller
 {
@@ -13,7 +14,7 @@ class PartController extends Controller
      */
     public function index()
     {
-        //
+        return Inertia::render('parts/Index');
     }
 
     /**
