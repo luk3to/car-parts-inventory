@@ -11,7 +11,7 @@ class UpdatePartRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -21,8 +21,12 @@ class UpdatePartRequest extends FormRequest
      */
     public function rules(): array
     {
+        $partId = request()->route('part')->id ?? null;
+
         return [
-            //
+            'car_id' => 'required|exists:cars,id',
+            'serial_number' => 'required|max:255|unique:parts,serial_number,' . $partId,
+            'name' => 'required|string|max:255',
         ];
     }
 }

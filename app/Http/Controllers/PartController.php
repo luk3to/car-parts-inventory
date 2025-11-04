@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePartRequest;
 use App\Http\Requests\UpdatePartRequest;
+use App\Models\Car;
 use App\Models\Part;
 use Inertia\Inertia;
 
@@ -14,7 +15,7 @@ class PartController extends Controller
      */
     public function index()
     {
-        return Inertia::render('parts/Index');
+        return Inertia::render('parts/Index', ['parts' => Part::with('car:id,name')->get()]);
     }
 
     /**
@@ -22,7 +23,7 @@ class PartController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('parts/Create', ['cars' => Car::all(['id', 'name'])]);
     }
 
     /**
@@ -30,7 +31,10 @@ class PartController extends Controller
      */
     public function store(StorePartRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        Part::create($validated);
+        return redirect()->route('parts.index')->with('success', 'Part created.');
     }
 
     /**
@@ -46,7 +50,7 @@ class PartController extends Controller
      */
     public function edit(Part $part)
     {
-        //
+        return Inertia::render('parts/Edit', ['part' => $part]);
     }
 
     /**
@@ -54,7 +58,10 @@ class PartController extends Controller
      */
     public function update(UpdatePartRequest $request, Part $part)
     {
-        //
+        $validated = $request->validated();
+        $part->update($validated);
+
+        return redirect()->route('parts.index')->with('success', 'Part updated.');
     }
 
     /**
@@ -62,6 +69,8 @@ class PartController extends Controller
      */
     public function destroy(Part $part)
     {
-        //
+        $part->delete();
+
+        return redirect()->route('parts.index')->with('success', 'Part deleted.');
     }
 }

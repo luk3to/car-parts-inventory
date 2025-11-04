@@ -14,7 +14,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        return Inertia::render('cars/Index');
+        return Inertia::render('cars/Index', ['cars' => Car::all()]);
     }
 
     /**
@@ -22,7 +22,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('cars/Create');
     }
 
     /**
@@ -30,7 +30,10 @@ class CarController extends Controller
      */
     public function store(StoreCarRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        Car::create($validated);
+        return redirect()->route('cars.index')->with('success', 'Car created.');
     }
 
     /**
@@ -46,7 +49,9 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        //
+        $car->load('parts');
+
+        return Inertia::render('cars/Edit', ['car' => $car]);
     }
 
     /**
@@ -54,7 +59,10 @@ class CarController extends Controller
      */
     public function update(UpdateCarRequest $request, Car $car)
     {
-        //
+        $validated = $request->validated();
+        $car->update($validated);
+
+        return redirect()->route('cars.index')->with('success', 'Car updated.');
     }
 
     /**
@@ -62,6 +70,8 @@ class CarController extends Controller
      */
     public function destroy(Car $car)
     {
-        //
+        $car->delete();
+
+        return redirect()->route('cars.index')->with('success', 'Car deleted.');
     }
 }

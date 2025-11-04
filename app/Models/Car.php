@@ -17,6 +17,10 @@ class Car extends Model
         'is_registered'
     ];
 
+    protected $casts = [
+        'is_registered' => 'boolean',
+    ];
+
     /**
      * Get parts for the car.
      */

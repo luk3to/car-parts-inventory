@@ -5,8 +5,8 @@ use App\Http\Controllers\PartController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return redirect()->route('carsIndex');
+    return redirect()->route('cars.index');
 });
 
-Route::get('/cars', [CarController::class, 'index'])->name('carsIndex');
-Route::get('/parts', [PartController::class, 'index'])->name('partsIndex');
+Route::resource('cars', CarController::class, ['except' => ['show']]);
+Route::resource('parts', PartController::class, ['except' => ['show']]);

@@ -1,4 +1,4 @@
-import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../../../wayfinder'
+import { queryParams, type RouteQueryOptions, type RouteDefinition, type RouteFormDefinition, applyUrlDefaults } from './../../wayfinder'
 /**
 * @see \App\Http\Controllers\CarController::index
 * @see app/Http/Controllers/CarController.php:15
@@ -527,6 +527,13 @@ destroyForm.delete = (args: { car: number | { id: number } } | [car: number | { 
 
 destroy.form = destroyForm
 
-const CarController = { index, create, store, edit, update, destroy }
+const cars = {
+    index: Object.assign(index, index),
+    create: Object.assign(create, create),
+    store: Object.assign(store, store),
+    edit: Object.assign(edit, edit),
+    update: Object.assign(update, update),
+    destroy: Object.assign(destroy, destroy),
+}
 
-export default CarController
+export default cars

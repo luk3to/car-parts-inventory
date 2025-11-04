@@ -11,7 +11,7 @@ class StorePartRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,9 @@ class StorePartRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'car_id' => 'required|exists:cars,id',
+            'serial_number' => 'required|unique:parts|max:255',
+            'name' => 'required|string|max:255',
         ];
     }
 }
