@@ -5,10 +5,18 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCarRequest;
 use App\Http\Requests\UpdateCarRequest;
 use App\Models\Car;
+use App\Services\CarService;
 use Inertia\Inertia;
 
 class CarController extends Controller
 {
+    private CarService $carService;
+
+    public function __construct(CarService $carService)
+    {
+        $this->carService = $carService;
+    }
+
     /**
      * Display a listing of the resource.
      */
@@ -30,9 +38,8 @@ class CarController extends Controller
      */
     public function store(StoreCarRequest $request)
     {
-        $validated = $request->validated();
+        $this->carService->store($request->validated());
 
-        Car::create($validated);
         return redirect()->route('cars.index')->with('success', 'Car created.');
     }
 
@@ -59,8 +66,7 @@ class CarController extends Controller
      */
     public function update(UpdateCarRequest $request, Car $car)
     {
-        $validated = $request->validated();
-        $car->update($validated);
+        $this->carService->update($request->validated(), $car);
 
         return redirect()->route('cars.index')->with('success', 'Car updated.');
     }

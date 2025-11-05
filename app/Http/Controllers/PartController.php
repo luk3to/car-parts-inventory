@@ -31,9 +31,8 @@ class PartController extends Controller
      */
     public function store(StorePartRequest $request)
     {
-        $validated = $request->validated();
+        Part::create($request->validated());
 
-        Part::create($validated);
         return redirect()->route('parts.index')->with('success', 'Part created.');
     }
 
@@ -50,7 +49,9 @@ class PartController extends Controller
      */
     public function edit(Part $part)
     {
-        return Inertia::render('parts/Edit', ['part' => $part]);
+        $cars = Car::all(['id', 'name']);
+
+        return Inertia::render('parts/Edit', ['part' => $part, 'cars' => $cars]);
     }
 
     /**
@@ -58,8 +59,7 @@ class PartController extends Controller
      */
     public function update(UpdatePartRequest $request, Part $part)
     {
-        $validated = $request->validated();
-        $part->update($validated);
+        $part->update($request->validated());
 
         return redirect()->route('parts.index')->with('success', 'Part updated.');
     }

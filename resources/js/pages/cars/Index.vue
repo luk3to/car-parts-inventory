@@ -3,7 +3,7 @@ import { Car } from '@/types';
 import { create as carsCreate } from '@/routes/cars';
 import { Head, Link } from '@inertiajs/vue3';
 import AppLayout from '@/layouts/AppLayout.vue';
-import CarsTable from '@/components/CarsTable.vue';
+import CarsTable from '@/components/cars/CarsTable.vue';
 
 interface Props {
     cars: Car[];

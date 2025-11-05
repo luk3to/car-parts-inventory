@@ -12,9 +12,7 @@ withDefaults(defineProps<Props>(), {
 });
 
 const deleteCar = (id: number) => {
-    if (
-        confirm('Are you sure you want to delete the car with ID: ' + id + ' ?')
-    ) {
+    if (confirm(`Are you sure you want to delete the car with ID: ${id} ?`)) {
         router.visit(carsDestroy(id));
     }
 };

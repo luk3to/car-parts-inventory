@@ -12,11 +12,7 @@ withDefaults(defineProps<Props>(), {
 });
 
 const deletePart = (id: number) => {
-    if (
-        confirm(
-            'Are you sure you want to delete the part with ID: ' + id + ' ?',
-        )
-    ) {
+    if (confirm(`Are you sure you want to delete the part with ID: ${id} ?`)) {
         router.visit(partsDestroy(id));
     }
 };

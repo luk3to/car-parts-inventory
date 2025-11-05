@@ -28,4 +28,14 @@ class Car extends Model
     {
         return $this->hasMany(Part::class);
     }
+
+    protected static function booted(): void
+    {
+        static::updating(function (self $car) {
+            // Reset registration_number if is_registered became false
+            if ($car->isDirty('is_registered') && !$car->is_registered) {
+                $car->registration_number = null;
+            }
+        });
+    }
 }

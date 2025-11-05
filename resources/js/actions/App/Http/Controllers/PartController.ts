@@ -219,7 +219,7 @@ store.form = storeForm
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 export const edit = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -234,7 +234,7 @@ edit.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 edit.url = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -267,7 +267,7 @@ edit.url = (args: { part: number | { id: number } } | [part: number | { id: numb
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 edit.get = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -277,7 +277,7 @@ edit.get = (args: { part: number | { id: number } } | [part: number | { id: numb
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 edit.head = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -287,7 +287,7 @@ edit.head = (args: { part: number | { id: number } } | [part: number | { id: num
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 const editForm = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -297,7 +297,7 @@ const editForm = (args: { part: number | { id: number } } | [part: number | { id
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 editForm.get = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -307,7 +307,7 @@ editForm.get = (args: { part: number | { id: number } } | [part: number | { id: 
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:51
+* @see app/Http/Controllers/PartController.php:50
 * @route '/parts/{part}/edit'
 */
 editForm.head = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -324,7 +324,7 @@ edit.form = editForm
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 export const update = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -339,7 +339,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 update.url = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -372,7 +372,7 @@ update.url = (args: { part: number | { id: number } } | [part: number | { id: nu
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 update.put = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -382,7 +382,7 @@ update.put = (args: { part: number | { id: number } } | [part: number | { id: nu
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 update.patch = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -392,7 +392,7 @@ update.patch = (args: { part: number | { id: number } } | [part: number | { id: 
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 const updateForm = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -407,7 +407,7 @@ const updateForm = (args: { part: number | { id: number } } | [part: number | { 
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 updateForm.put = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -422,7 +422,7 @@ updateForm.put = (args: { part: number | { id: number } } | [part: number | { id
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:59
+* @see app/Http/Controllers/PartController.php:60
 * @route '/parts/{part}'
 */
 updateForm.patch = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

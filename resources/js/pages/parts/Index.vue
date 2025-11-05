@@ -3,7 +3,7 @@ import { Part } from '@/types';
 import { create as partsCreate } from '@/routes/parts';
 import { Head, Link } from '@inertiajs/vue3';
 import AppLayout from '@/layouts/AppLayout.vue';
-import PartsTable from '@/components/PartsTable.vue';
+import PartsTable from '@/components/parts/PartsTable.vue';
 
 interface Props {
     parts: Part[];

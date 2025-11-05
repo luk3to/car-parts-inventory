@@ -21,10 +21,21 @@ class UpdateCarRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+        $rules = [
             'name' => 'required|string|max:255',
             'is_registered' => 'boolean',
             'registration_number' => 'required_if:is_registered,true',
+            'parts' => 'array',
         ];
+
+        foreach (request()->get('parts', []) as $index => $part) {
+            $partId = $part['id'] ?? null;
+
+            $rules['parts.' . $index . '.id'] = 'nullable|integer|exists:parts,id';
+            $rules['parts.' . $index . '.name'] = 'required|string|max:255';
+            $rules['parts.' . $index . '.serial_number'] = 'required|max:255|unique:parts,serial_number,' . $partId;
+        }
+
+        return $rules;
     }
 }

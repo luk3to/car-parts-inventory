@@ -24,3 +24,19 @@ export interface Part {
     created_at: string;
     updated_at: string;
 }
+
+export type CarFormData = {
+    name: string;
+    registration_number: string;
+    is_registered: boolean;
+    parts: {
+        name: string;
+        serial_number: string;
+    }[];
+};
+
+export type PartFormData = {
+    car_id?: number;
+    serial_number: string;
+    name: string;
+};
