@@ -15,7 +15,9 @@ class PartController extends Controller
      */
     public function index()
     {
-        return Inertia::render('parts/Index', ['parts' => Part::with('car:id,name')->get()]);
+        $parts = Part::filter()->with('car:id,name')->get();
+
+        return Inertia::render('parts/Index', ['parts' => $parts]);
     }
 
     /**

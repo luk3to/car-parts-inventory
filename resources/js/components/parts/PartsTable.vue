@@ -18,7 +18,10 @@ const deletePart = (id: number) => {
 };
 </script>
 <template>
-    <div class="table-responsive">
+    <div v-if="!parts.length" class="alert alert-info text-center" role="alert">
+        No parts found.
+    </div>
+    <div v-else class="table-responsive">
         <table class="table">
             <thead>
                 <tr>

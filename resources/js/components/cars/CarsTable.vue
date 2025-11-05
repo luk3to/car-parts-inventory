@@ -18,7 +18,10 @@ const deleteCar = (id: number) => {
 };
 </script>
 <template>
-    <div class="table-responsive">
+    <div v-if="!cars.length" class="alert alert-info text-center" role="alert">
+        No cars found.
+    </div>
+    <div v-else class="table-responsive">
         <table class="table">
             <thead>
                 <tr>

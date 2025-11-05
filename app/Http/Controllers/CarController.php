@@ -22,7 +22,7 @@ class CarController extends Controller
      */
     public function index()
     {
-        return Inertia::render('cars/Index', ['cars' => Car::all()]);
+        return Inertia::render('cars/Index', ['cars' => Car::filter()->get()]);
     }
 
     /**

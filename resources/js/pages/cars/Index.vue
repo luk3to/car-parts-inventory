@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { Car } from '@/types';
+import { Car, CarFiltersData } from '@/types';
 import { create as carsCreate } from '@/routes/cars';
 import { Head, Link } from '@inertiajs/vue3';
 import AppLayout from '@/layouts/AppLayout.vue';
 import CarsTable from '@/components/cars/CarsTable.vue';
+import CarsFilters from '@/components/cars/CarsFilters.vue';
 
 interface Props {
     cars: Car[];
+    filters?: CarFiltersData;
 }
 
 withDefaults(defineProps<Props>(), {
@@ -27,6 +29,7 @@ const title = 'Cars';
             >
         </template>
 
+        <CarsFilters :filters="filters" />
         <CarsTable :cars="cars" />
     </AppLayout>
 </template>

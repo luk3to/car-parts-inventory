@@ -82,7 +82,7 @@ index.form = indexForm
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 export const create = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -97,7 +97,7 @@ create.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 create.url = (options?: RouteQueryOptions) => {
@@ -106,7 +106,7 @@ create.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -116,7 +116,7 @@ create.get = (options?: RouteQueryOptions): RouteDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -126,7 +126,7 @@ create.head = (options?: RouteQueryOptions): RouteDefinition<'head'> => ({
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -136,7 +136,7 @@ const createForm = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => 
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -146,7 +146,7 @@ createForm.get = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
 
 /**
 * @see \App\Http\Controllers\PartController::create
-* @see app/Http/Controllers/PartController.php:24
+* @see app/Http/Controllers/PartController.php:26
 * @route '/parts/create'
 */
 createForm.head = (options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -163,7 +163,7 @@ create.form = createForm
 
 /**
 * @see \App\Http\Controllers\PartController::store
-* @see app/Http/Controllers/PartController.php:32
+* @see app/Http/Controllers/PartController.php:34
 * @route '/parts'
 */
 export const store = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -178,7 +178,7 @@ store.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::store
-* @see app/Http/Controllers/PartController.php:32
+* @see app/Http/Controllers/PartController.php:34
 * @route '/parts'
 */
 store.url = (options?: RouteQueryOptions) => {
@@ -187,7 +187,7 @@ store.url = (options?: RouteQueryOptions) => {
 
 /**
 * @see \App\Http\Controllers\PartController::store
-* @see app/Http/Controllers/PartController.php:32
+* @see app/Http/Controllers/PartController.php:34
 * @route '/parts'
 */
 store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
@@ -197,7 +197,7 @@ store.post = (options?: RouteQueryOptions): RouteDefinition<'post'> => ({
 
 /**
 * @see \App\Http\Controllers\PartController::store
-* @see app/Http/Controllers/PartController.php:32
+* @see app/Http/Controllers/PartController.php:34
 * @route '/parts'
 */
 const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -207,7 +207,7 @@ const storeForm = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => 
 
 /**
 * @see \App\Http\Controllers\PartController::store
-* @see app/Http/Controllers/PartController.php:32
+* @see app/Http/Controllers/PartController.php:34
 * @route '/parts'
 */
 storeForm.post = (options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -219,7 +219,7 @@ store.form = storeForm
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 export const edit = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -234,7 +234,7 @@ edit.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 edit.url = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -267,7 +267,7 @@ edit.url = (args: { part: number | { id: number } } | [part: number | { id: numb
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 edit.get = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'get'> => ({
@@ -277,7 +277,7 @@ edit.get = (args: { part: number | { id: number } } | [part: number | { id: numb
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 edit.head = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'head'> => ({
@@ -287,7 +287,7 @@ edit.head = (args: { part: number | { id: number } } | [part: number | { id: num
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 const editForm = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -297,7 +297,7 @@ const editForm = (args: { part: number | { id: number } } | [part: number | { id
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 editForm.get = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -307,7 +307,7 @@ editForm.get = (args: { part: number | { id: number } } | [part: number | { id: 
 
 /**
 * @see \App\Http\Controllers\PartController::edit
-* @see app/Http/Controllers/PartController.php:50
+* @see app/Http/Controllers/PartController.php:52
 * @route '/parts/{part}/edit'
 */
 editForm.head = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'get'> => ({
@@ -324,7 +324,7 @@ edit.form = editForm
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 export const update = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -339,7 +339,7 @@ update.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 update.url = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -372,7 +372,7 @@ update.url = (args: { part: number | { id: number } } | [part: number | { id: nu
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 update.put = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'put'> => ({
@@ -382,7 +382,7 @@ update.put = (args: { part: number | { id: number } } | [part: number | { id: nu
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 update.patch = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'patch'> => ({
@@ -392,7 +392,7 @@ update.patch = (args: { part: number | { id: number } } | [part: number | { id: 
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 const updateForm = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -407,7 +407,7 @@ const updateForm = (args: { part: number | { id: number } } | [part: number | { 
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 updateForm.put = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -422,7 +422,7 @@ updateForm.put = (args: { part: number | { id: number } } | [part: number | { id
 
 /**
 * @see \App\Http\Controllers\PartController::update
-* @see app/Http/Controllers/PartController.php:60
+* @see app/Http/Controllers/PartController.php:62
 * @route '/parts/{part}'
 */
 updateForm.patch = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -439,7 +439,7 @@ update.form = updateForm
 
 /**
 * @see \App\Http\Controllers\PartController::destroy
-* @see app/Http/Controllers/PartController.php:70
+* @see app/Http/Controllers/PartController.php:72
 * @route '/parts/{part}'
 */
 export const destroy = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -454,7 +454,7 @@ destroy.definition = {
 
 /**
 * @see \App\Http\Controllers\PartController::destroy
-* @see app/Http/Controllers/PartController.php:70
+* @see app/Http/Controllers/PartController.php:72
 * @route '/parts/{part}'
 */
 destroy.url = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions) => {
@@ -487,7 +487,7 @@ destroy.url = (args: { part: number | { id: number } } | [part: number | { id: n
 
 /**
 * @see \App\Http\Controllers\PartController::destroy
-* @see app/Http/Controllers/PartController.php:70
+* @see app/Http/Controllers/PartController.php:72
 * @route '/parts/{part}'
 */
 destroy.delete = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteDefinition<'delete'> => ({
@@ -497,7 +497,7 @@ destroy.delete = (args: { part: number | { id: number } } | [part: number | { id
 
 /**
 * @see \App\Http\Controllers\PartController::destroy
-* @see app/Http/Controllers/PartController.php:70
+* @see app/Http/Controllers/PartController.php:72
 * @route '/parts/{part}'
 */
 const destroyForm = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({
@@ -512,7 +512,7 @@ const destroyForm = (args: { part: number | { id: number } } | [part: number | {
 
 /**
 * @see \App\Http\Controllers\PartController::destroy
-* @see app/Http/Controllers/PartController.php:70
+* @see app/Http/Controllers/PartController.php:72
 * @route '/parts/{part}'
 */
 destroyForm.delete = (args: { part: number | { id: number } } | [part: number | { id: number } ] | number | { id: number }, options?: RouteQueryOptions): RouteFormDefinition<'post'> => ({

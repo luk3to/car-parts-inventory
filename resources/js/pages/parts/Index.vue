@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { Part } from '@/types';
+import { Part, PartFiltersData } from '@/types';
 import { create as partsCreate } from '@/routes/parts';
 import { Head, Link } from '@inertiajs/vue3';
 import AppLayout from '@/layouts/AppLayout.vue';
 import PartsTable from '@/components/parts/PartsTable.vue';
+import PartsFilters from '@/components/parts/PartsFilters.vue';
 
 interface Props {
     parts: Part[];
+    filters?: PartFiltersData;
 }
 
 withDefaults(defineProps<Props>(), {
@@ -27,6 +29,7 @@ const title = 'Parts';
             >
         </template>
 
+        <PartsFilters :filters="filters" />
         <PartsTable :parts="parts" />
     </AppLayout>
 </template>

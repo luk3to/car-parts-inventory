@@ -40,3 +40,14 @@ export type PartFormData = {
     serial_number: string;
     name: string;
 };
+
+export type CarFiltersData = {
+    name: string;
+    registration_number: string;
+    is_registered: string;
+};
+
+export type PartFiltersData = {
+    serial_number: string;
+    name: string;
+};
